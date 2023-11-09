@@ -1,14 +1,15 @@
 'use client'
 import useCart from '@/hooks/useCart'
+import { AnimeCardType } from '@/types/types'
 import { Anime } from '@prisma/client'
 import { FaTrash } from 'react-icons/fa'
 
-const RemoveFromCartBtn = ({ anime }: { anime: Anime }) => {
+const RemoveFromCartBtn = ({ anime }: { anime: AnimeCardType }) => {
   const cart = useCart()
 
   const clickHandler = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-    anime: Anime
+    anime: AnimeCardType
   ) => {
     e.preventDefault()
     cart?.removeItemFromCart(anime)
