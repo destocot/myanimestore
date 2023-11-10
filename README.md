@@ -29,12 +29,12 @@
 
 <h3>Mobile</h3>
 <p float="left">
-<img src="https://i.imgur.com/82QTpI2.png" alt="project-screenshot" width="200" height="auto" />
-<img src="https://i.imgur.com/htHjRXh.png" alt="project-screenshot" width="200" height="auto" />
-<img src="https://i.imgur.com/S5YKgW2.png" alt="project-screenshot" width="200" height="auto" />
-<img src="https://i.imgur.com/AdOXC6V.png" alt="project-screenshot" width="200" height="auto" />
-<img src="https://i.imgur.com/B7uxk0G.png" alt="project-screenshot" width="200" height="auto" />
-<img src="https://i.imgur.com/tLVkWYK.png" alt="project-screenshot" width="200" height="auto" />
+<img src="https://i.imgur.com/82QTpI2.png" alt="project-screenshot" width="240" height="auto" />
+<img src="https://i.imgur.com/htHjRXh.png" alt="project-screenshot" width="240" height="auto" />
+<img src="https://i.imgur.com/S5YKgW2.png" alt="project-screenshot" width="240" height="auto" />
+<img src="https://i.imgur.com/AdOXC6V.png" alt="project-screenshot" width="240" height="auto" />
+<img src="https://i.imgur.com/B7uxk0G.png" alt="project-screenshot" width="240" height="auto" />
+<img src="https://i.imgur.com/tLVkWYK.png" alt="project-screenshot" width="240" height="auto" />
 </p>
 
   
