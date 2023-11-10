@@ -1,5 +1,8 @@
 'use client'
+import { ToastAction } from '@/components/ui/toast'
+import { toast } from '@/components/ui/use-toast'
 import { AnimeCardType } from '@/types/types'
+import Link from 'next/link'
 import { createContext, useEffect, useState } from 'react'
 
 type CartContextType = {
@@ -39,9 +42,16 @@ const Cart = ({ children }: { children: React.ReactNode }) => {
     const item = cart.find((i) => i.id === anime.id)
 
     if (item) {
-      // ITEM ALREADY IN CART
+      toast({
+        variant: 'alt',
+        title: 'Item already in cart!',
+      })
     } else {
       setCart([...cart, anime])
+      toast({
+        variant: 'alt',
+        title: 'Item added to cart!',
+      })
     }
   }
 

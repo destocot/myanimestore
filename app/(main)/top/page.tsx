@@ -1,9 +1,12 @@
-import AddToCartBtn from '@/components/AddToCartBtn'
 import AnimeMainCard from '@/components/AnimeMainCard'
 import { prisma } from '@/lib/db'
-import Image from 'next/image'
-import Link from 'next/link'
-import { FaInfoCircle } from 'react-icons/fa'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'MyAnimeStore - Top 10 Anime',
+  description:
+    'Discover the top 10 anime on MyAnimeStore based on user ratings and reviews.',
+}
 
 const getTopAnime = async () => {
   const data = await prisma.anime.findMany({

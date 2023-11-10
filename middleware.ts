@@ -9,7 +9,13 @@ export default authMiddleware({
       return redirectToSignIn({ returnBackUrl: req.url })
     }
   },
-  publicRoutes: ['/', '/anime/(.*)', '/search/(.*)', '/top/(.*)'],
+  publicRoutes: [
+    '/',
+    '/anime/(.*)',
+    '/search/(.*)',
+    '/top',
+    '/api/stripe/confirmation',
+  ],
 })
 
 export const config = {

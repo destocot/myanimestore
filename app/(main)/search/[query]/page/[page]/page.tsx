@@ -1,11 +1,15 @@
-import AddToCartBtn from '@/components/AddToCartBtn'
 import AnimeMainCard from '@/components/AnimeMainCard'
 import SearchAnime from '@/components/SearchAnime'
 import { Button } from '@/components/ui/button'
 import { prisma } from '@/lib/db'
-import Image from 'next/image'
+import { Metadata } from 'next'
 import Link from 'next/link'
-import { FaInfoCircle } from 'react-icons/fa'
+
+export const metadata: Metadata = {
+  title: 'MyAnimeStore - Anime Search',
+  description:
+    'Search for your favorite anime series and movies on MyAnimeStore.',
+}
 
 const getSearchResults = async (query: string, page: number) => {
   const anime = await prisma.anime.findMany({

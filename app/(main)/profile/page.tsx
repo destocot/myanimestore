@@ -1,13 +1,15 @@
 import AnimeMainCard from '@/components/AnimeMainCard'
 import { getUserByClerkId } from '@/lib/auth'
 import { prisma } from '@/lib/db'
-import Image from 'next/image'
-import Link from 'next/link'
-import { FaInfoCircle } from 'react-icons/fa'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'MyAnimeStore - User Profile',
+  description: 'View and manage your MyAnimeStore user profile.',
+}
 
 const getUser = async () => {
   const user = await getUserByClerkId()
-
   const data = await prisma.user.findUniqueOrThrow({
     where: {
       id: user.id,

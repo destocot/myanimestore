@@ -2,7 +2,10 @@ import AddToCartBtn from '@/components/AddToCartBtn'
 import { prisma } from '@/lib/db'
 import Image from 'next/image'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import { FaInfoCircle } from 'react-icons/fa'
+
+export const dynamicParams = false
 
 export async function generateStaticParams() {
   const anime = await prisma.anime.findMany({
@@ -18,13 +21,16 @@ export async function generateStaticParams() {
 const getAnimeDetails = async (id: number) => {
   const mal_id = +id
 
-  const data = await prisma.anime.findUniqueOrThrow({
-    where: {
-      mal_id,
-    },
-  })
-
-  return data
+  try {
+    const data = await prisma.anime.findUniqueOrThrow({
+      where: {
+        mal_id,
+      },
+    })
+    return data
+  } catch (error) {
+    notFound()
+  }
 }
 
 const getRelatedAnime = async (embedding: number[]) => {
@@ -69,7 +75,12 @@ const AnimeDetailsPage = async ({ params }: { params: { id: number } }) => {
           className="object-cover h-auto aspect-[2/3] max-w-[175px] md:max-w-[275px] border-2 border-transparent hover:border-blue-500 hover:cursor-pointer "
         />
         <div className="flex flex-col">
-          <h1 className="mb-2">{anime.title}</h1>
+          <div className="flex items-center">
+            <h1 className="mb-2">{anime.title}</h1>
+            <div className="ml-auto">
+              <AddToCartBtn anime={anime} />
+            </div>
+          </div>
           <div className="flex gap-5">
             <span className="font-semibold">Genres:</span>
             <ul className="flex flex-wrap gap-2">
@@ -85,17 +96,17 @@ const AnimeDetailsPage = async ({ params }: { params: { id: number } }) => {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {related.map((anime) => (
           <div
-            className="relative border-2 border-transparent transition-all hover:border-white"
-            key={anime.id}
+            className="relative border-2 border-transparent transition-all hover:border-white max-w-[215px]"
+            key={anime._id}
           >
             <Image
               src={anime.main_picture}
               alt="anime image"
               width={400}
               height={600}
-              className="object-cover h-[auto] aspect-[2/3] max-w-[215px]  hover:cursor-pointer"
+              className="object-cover h-[auto] aspect-[2/3]   hover:cursor-pointer"
             />
-            <div className="w-full h-full top-0 left-0 absolute bg-white/60 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-all gap-4 px-2 text-black max-w-[215px]">
+            <div className="w-full h-full top-0 left-0 absolute bg-white/60 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-all gap-4 px-2 text-black">
               <p className="font-semibold text-center">{anime.title}</p>
               <div className="flex gap-4">
                 <Link

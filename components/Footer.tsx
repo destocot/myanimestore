@@ -4,20 +4,20 @@ import { FolderKanbanIcon, GithubIcon, Instagram, Linkedin } from 'lucide-react'
 export default function Footer() {
   return (
     <footer className="dark:bg-slate-900/40">
-      <div className="container flex flex-wrap items-center px-4 py-8 mx-auto justify-between">
+      <div className="container flex flex-wrap items-center px-4 py-8 mx-auto justify-between max-w-5xl">
         <div className="flex flex-wrap justify-center">
           <ul className="flex items-center space-x-4">
-            <li>
+            <li className="hover:underline underline-offset-4">
               <Link href={'/'}>Home</Link>
             </li>
-            <li>
+            <li className="hover:underline underline-offset-4">
               <Link href={'/profile'}>Profile</Link>
             </li>
-            <li>
+            <li className="hover:underline underline-offset-4">
               <Link href={'/search/anime/page/1'}>Search</Link>
             </li>
-            <li>
-              <Link href={'/top'}>Khurram&apos;s Profile</Link>
+            <li className="hover:underline underline-offset-4">
+              <Link href={'/top'}>Khurram&apos;s Top 10</Link>
             </li>
           </ul>
         </div>

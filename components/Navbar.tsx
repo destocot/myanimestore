@@ -3,6 +3,7 @@ import { UserButton, auth } from '@clerk/nextjs'
 import Link from 'next/link'
 import { FaHome, FaStar, FaStore, FaUser } from 'react-icons/fa'
 import { FaMicrochip } from 'react-icons/fa6'
+import CartToggle from './CartToggle'
 
 const Navbar = async () => {
   const { userId }: { userId: string | null } = auth()
@@ -10,7 +11,7 @@ const Navbar = async () => {
   return (
     <nav className="flex flex-wrap justify-between items-center pt-2">
       <Link href="/" className="flex mx-auto md:mx-0 gap-5 items-center">
-        <h1>MyAnimeStore</h1>
+        <h1 className="text-5xl sm:text-4xl">MyAnimeStore</h1>
         <FaStore className="text-5xl" />
       </Link>
       <ul className="flex mt-4 items-center mx-auto md:mx-0 gap-4">
@@ -42,6 +43,9 @@ const Navbar = async () => {
                 Try AI
               </code>
             </Link>
+            <div className="relative md:hidden">
+              <CartToggle />
+            </div>
             <UserButton
               afterSignOutUrl="/sign-in"
               appearance={{
@@ -53,11 +57,17 @@ const Navbar = async () => {
           </>
         ) : (
           <>
-            <Link href="/top">
+            <Link href="/top" className="relative">
               <Button variant="default" className="text-white font-semibold">
                 <FaStar className="text-lg" />
               </Button>
+              <code className="absolute -top-4 right-0 text-sm whitespace-nowrap left-0">
+                Top 10
+              </code>
             </Link>
+            <div className="relative md:hidden">
+              <CartToggle />
+            </div>
             <Link href="/sign-in">
               <Button className="font-semibold text-white">Login</Button>
             </Link>

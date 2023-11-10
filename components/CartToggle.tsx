@@ -18,7 +18,7 @@ export default async function SheetDemo() {
 
   return (
     <Sheet>
-      <SheetTrigger asChild className="absolute right-2 top-2">
+      <SheetTrigger asChild>
         <Button variant="default">
           <FaShoppingCart className="text-lg text-white" />
         </Button>
