@@ -26,7 +26,16 @@
 <p align="center">
 <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWc0b3MyZHM0YmdhbTl0ZHllZXdpNmJ3M3Fra20zcjZoNXNzanhkZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7w1bMpDyY0ZX16qLMo/giphy.gif" alt="project-screenshot" width="500" height="auto">
 </p>
-  
+
+<h3>Mobile</h3>
+<p float="left">
+<img src="https://i.imgur.com/82QTpI2.png" alt="project-screenshot" width="160" height="auto" />
+<img src="https://i.imgur.com/htHjRXh.png" alt="project-screenshot" width="160" height="auto" />
+<img src="https://i.imgur.com/S5YKgW2.png" alt="project-screenshot" width="160" height="auto" />
+<img src="https://i.imgur.com/AdOXC6V.png" alt="project-screenshot" width="160" height="auto" />
+<img src="https://i.imgur.com/B7uxk0G.png" alt="project-screenshot" width="160" height="auto" />
+<img src="https://i.imgur.com/tLVkWYK.png" alt="project-screenshot" width="160" height="auto" />
+</p>
   
 <h2>🧐 Features</h2>
 
