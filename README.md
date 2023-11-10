@@ -11,17 +11,21 @@
 [https://myanimestore.vercel.app/](https://myanimestore.vercel.app/)
 
 <h2>Project Screenshots:</h2>
-
-<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExODZtZWoxZXNqMG9nY21nYzRuMGkxYTl1enNuazhtb2phamoybm9iMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5nnBmGfHyJAq1pddl8/giphy.gif" alt="project-screenshot" width="300" height="400/">
-
-<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHFrNHY4OGF2OWtzc2ozc2J0amtpdnk4aGhrN3Fmemg5NmRma2N3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SKpA3fql5PLkbXfbh2/giphy.gif" alt="project-screenshot" width="300" height="400/">
-
-<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGgyenh0Z3Zkb3phMnBrNXJ5NHUyeDQ0c2gycHNtd2hjZGtmdjNtYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qCa9kLLLct2nJDj7vv/giphy.gif" alt="project-screenshot" width="300" height="400/">
-
-<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHloYjd5d3c3ZTY4MzRsOHNyOW84MHBzbzF6emNhZGd6eWU4Z2V4ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZqSbryU5JriAuPzLQB/giphy.gif" alt="project-screenshot" width="300" height="400/">
-
-<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWc0b3MyZHM0YmdhbTl0ZHllZXdpNmJ3M3Fra20zcjZoNXNzanhkZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7w1bMpDyY0ZX16qLMo/giphy.gif" alt="project-screenshot" width="300" height="400/">
-
+<p align="center">
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExODZtZWoxZXNqMG9nY21nYzRuMGkxYTl1enNuazhtb2phamoybm9iMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5nnBmGfHyJAq1pddl8/giphy.gif" alt="project-screenshot" width="500" height="auto">
+</p>
+<p align="center">
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHFrNHY4OGF2OWtzc2ozc2J0amtpdnk4aGhrN3Fmemg5NmRma2N3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SKpA3fql5PLkbXfbh2/giphy.gif" alt="project-screenshot" width="500" height="auto">
+</p>
+<p align="center">
+<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGgyenh0Z3Zkb3phMnBrNXJ5NHUyeDQ0c2gycHNtd2hjZGtmdjNtYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qCa9kLLLct2nJDj7vv/giphy.gif" alt="project-screenshot" width="500" height="auto">
+</p>
+<p align="center">
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHloYjd5d3c3ZTY4MzRsOHNyOW84MHBzbzF6emNhZGd6eWU4Z2V4ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZqSbryU5JriAuPzLQB/giphy.gif" alt="project-screenshot" width="500" height="auto">
+</p>
+<p align="center">
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWc0b3MyZHM0YmdhbTl0ZHllZXdpNmJ3M3Fra20zcjZoNXNzanhkZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7w1bMpDyY0ZX16qLMo/giphy.gif" alt="project-screenshot" width="500" height="auto">
+</p>
   
   
 <h2>🧐 Features</h2>
