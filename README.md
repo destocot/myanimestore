@@ -29,17 +29,14 @@
 
 <h3>Mobile</h3>
 <p float="left">
-<img src="https://i.imgur.com/82QTpI2.png" alt="project-screenshot" width="160" height="auto" />
-<img src="https://i.imgur.com/htHjRXh.png" alt="project-screenshot" width="160" height="auto" />
-<br> <!-- Add a line break to create space -->
-<img src="https://i.imgur.com/S5YKgW2.png" alt="project-screenshot" width="160" height="auto" />
-<br> <!-- Add a line break to create space -->
-<img src="https://i.imgur.com/AdOXC6V.png" alt="project-screenshot" width="160" height="auto" />
-<br> <!-- Add a line break to create space -->
-<img src="https://i.imgur.com/B7uxk0G.png" alt="project-screenshot" width="160" height="auto" />
-<br> <!-- Add a line break to create space -->
-<img src="https://i.imgur.com/tLVkWYK.png" alt="project-screenshot" width="160" height="auto" />
+<img src="https://i.imgur.com/82QTpI2.png" alt="project-screenshot" width="160" height="auto" style="margin-right: 20px;" />
+<img src="https://i.imgur.com/htHjRXh.png" alt="project-screenshot" width="160" height="auto" style="margin-right: 20px;" />
+<img src="https://i.imgur.com/S5YKgW2.png" alt="project-screenshot" width="160" height="auto" style="margin-right: 20px;" />
+<img src="https://i.imgur.com/AdOXC6V.png" alt="project-screenshot" width="160" height="auto" style="margin-right: 20px;" />
+<img src="https://i.imgur.com/B7uxk0G.png" alt="project-screenshot" width="160" height="auto" style="margin-right: 20px;" />
+<img src="https://i.imgur.com/tLVkWYK.png" alt="project-screenshot" width="160" height="auto" style="margin-right: 20px;" />
 </p>
+
   
 <h2>🧐 Features</h2>
 
