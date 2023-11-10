@@ -1,0 +1,3 @@
+# Allow all crawlers for all routes except /api
+User-agent: *
+Disallow: /api/
