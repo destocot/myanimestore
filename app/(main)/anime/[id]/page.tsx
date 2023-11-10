@@ -72,12 +72,12 @@ const AnimeDetailsPage = async ({ params }: { params: { id: number } }) => {
           alt="anime image"
           width={400}
           height={600}
-          className="object-cover h-auto aspect-[2/3] max-w-[175px] md:max-w-[275px] border-2 border-transparent hover:border-blue-500 hover:cursor-pointer "
+          className="object-cover h-auto aspect-[2/3] max-w-[200px] md:max-w-[275px] border-2 border-transparent hover:border-blue-500 hover:cursor-pointer "
         />
-        <div className="flex flex-col">
-          <div className="flex items-center">
+        <div className="flex flex-col mx-auto">
+          <div className="flex justify-between items-center">
             <h1 className="mb-2">{anime.title}</h1>
-            <div className="ml-auto">
+            <div className="mx-2">
               <AddToCartBtn anime={anime} />
             </div>
           </div>
@@ -89,14 +89,15 @@ const AnimeDetailsPage = async ({ params }: { params: { id: number } }) => {
               ))}
             </ul>
           </div>
-          <p className="flex-1">{anime.synopsis}</p>
+          <p className="flex-1 hidden md:block">{anime.synopsis}</p>
         </div>
       </div>
+      <p className="px-2 md:hidden text-justify">{anime.synopsis}</p>
       <h2>Related Anime</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {related.map((anime) => (
           <div
-            className="relative border-2 border-transparent transition-all hover:border-white max-w-[215px]"
+            className="relative border-2 border-transparent transition-all hover:border-white max-w-[215px] mx-auto"
             key={anime._id}
           >
             <Image

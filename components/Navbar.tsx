@@ -47,7 +47,7 @@ const Navbar = async () => {
               <CartToggle />
             </div>
             <UserButton
-              afterSignOutUrl="/sign-in"
+              afterSignOutUrl="/"
               appearance={{
                 elements: {
                   userButtonPopoverActionButton__manageAccount: 'hidden',
@@ -57,13 +57,10 @@ const Navbar = async () => {
           </>
         ) : (
           <>
-            <Link href="/top" className="relative">
+            <Link href="/top">
               <Button variant="default" className="text-white font-semibold">
                 <FaStar className="text-lg" />
               </Button>
-              <code className="absolute -top-4 right-0 text-sm whitespace-nowrap left-0">
-                Top 10
-              </code>
             </Link>
             <div className="relative md:hidden">
               <CartToggle />
