@@ -36,7 +36,7 @@ const ProfilePage = async () => {
   return (
     <main>
       <h2 className="my-2">{userWithAnime.username}&apos;s Profile</h2>
-      <h3 className="my-2">Purchased Anime</h3>
+      <h3 className="my-2">Anime Collection</h3>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {userWithAnime.animes.length &&
           userWithAnime.animes.map((anime) => (

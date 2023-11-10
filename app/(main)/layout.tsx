@@ -10,7 +10,7 @@ export default function MainLayout({
 }) {
   return (
     <CartProvider>
-      <div className="absolute right-2 top-2 hidden md:block">
+      <div className="fixed right-2 top-2 hidden md:block">
         <CartToggle />
       </div>
       <Navbar />
