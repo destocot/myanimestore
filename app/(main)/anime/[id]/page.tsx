@@ -11,7 +11,7 @@ export async function generateStaticParams() {
     },
   })
   return anime.map((item) => ({
-    slug: item.mal_id,
+    id: item.mal_id.toString(),
   }))
 }
 
