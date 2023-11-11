@@ -23,7 +23,7 @@ export default function Footer() {
               </Link>
             </li>
             <li className="hover:underline underline-offset-4">
-              <Link href={'/top'} aria-label="top 10 anime">
+              <Link href={'/top'} aria-label="Khurram's Top 10">
                 Khurram&apos;s Top 10
               </Link>
             </li>

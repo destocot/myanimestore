@@ -13,7 +13,7 @@ const Navbar = async () => {
       <Link
         href="/"
         className="flex mx-auto md:mx-0 gap-5 items-center"
-        aria-label="home"
+        aria-label="MyAnimeStore"
       >
         <h1 className="text-5xl sm:text-4xl">MyAnimeStore</h1>
         <FaStore className="text-5xl" />
@@ -23,28 +23,37 @@ const Navbar = async () => {
           <>
             <li>
               <Link href="/" aria-label="home">
-                <Button variant="secondary">
+                <Button variant="secondary" aria-label="home btn">
                   <FaHome className="text-xl" />
                 </Button>
               </Link>
             </li>
             <li>
               <Link href="/profile" aria-label="profile">
-                <Button variant="default" className="text-white font-semibold">
+                <Button
+                  variant="default"
+                  className="text-white font-semibold"
+                  aria-label="profile btn"
+                >
                   <FaUser className="text-lg" />
                 </Button>
               </Link>
             </li>
             <li>
               <Link href="/top" aria-label="top 10 anime">
-                <Button variant="default" className="text-white font-semibold">
+                <Button
+                  variant="default"
+                  className="text-white font-semibold"
+                  aria-label="top 10 anime btn"
+                >
                   <FaStar className="text-lg" />
                 </Button>
               </Link>
             </li>
             <li>
-              <Link href="/ai" className="relative" aria-label="anime ai">
+              <Link href="/ai" className="relative" aria-label="Try AI">
                 <Button
+                  aria-label="Try AI btn"
                   variant="destructive"
                   className="text-white font-semibold"
                 >
@@ -75,7 +84,11 @@ const Navbar = async () => {
           <>
             <li>
               <Link href="/top" aria-label="top 10 anime">
-                <Button variant="default" className="text-white font-semibold">
+                <Button
+                  variant="default"
+                  className="text-white font-semibold"
+                  aria-label="top 10 anime btn"
+                >
                   <FaStar className="text-lg" />
                 </Button>
               </Link>
@@ -87,7 +100,12 @@ const Navbar = async () => {
             </li>
             <li>
               <Link href="/sign-in" aria-label="sign-in">
-                <Button className="font-semibold text-white">Login</Button>
+                <Button
+                  className="font-semibold text-white"
+                  aria-label="sign-in btn"
+                >
+                  Login
+                </Button>
               </Link>
             </li>
           </>

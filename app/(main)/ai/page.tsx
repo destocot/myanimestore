@@ -30,7 +30,7 @@ const dailyCheckIn = async (id: string) => {
         id,
       },
       data: {
-        gpt_points: user.gpt_points + 1,
+        gpt_points: user.gpt_points + 2,
         refresh_date: date,
       },
       select: {
@@ -51,7 +51,7 @@ const AiPage = async () => {
     <main>
       <div className="mb-auto md:w-1/2 w-full px-2 md:px-0 shadow-2xl mx-auto">
         <h2>Ask AI For A Recommendation</h2>
-        <h4 className=" mb-1">
+        <p className=" mb-1">
           Points Remaining:{' '}
           <span
             className={`font-semibold ${
@@ -61,7 +61,7 @@ const AiPage = async () => {
             {data.gpt_points}
           </span>{' '}
           (check-in daily for a free point)
-        </h4>
+        </p>
         <Chat points={data.gpt_points} />
       </div>
     </main>

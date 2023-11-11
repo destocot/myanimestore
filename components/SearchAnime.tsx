@@ -51,7 +51,7 @@ const SearchAnime = () => {
             </FormItem>
           )}
         />
-        <Button type="submit">
+        <Button type="submit" aria-label="search btn">
           <FaSearch className="text-white" />
         </Button>
       </form>
