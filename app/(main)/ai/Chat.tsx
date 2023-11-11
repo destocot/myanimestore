@@ -129,6 +129,7 @@ const displayMessage = (message: ChatMessageType) => {
           <p className="">
             click{' '}
             <Link
+              aria-label="anime details"
               href={`/anime/${message.mal_id}`}
               className="font-semibold text-blue-500"
             >

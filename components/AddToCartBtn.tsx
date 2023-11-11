@@ -23,7 +23,7 @@ const AddToCartBtn = ({ anime }: { anime: AnimeCardType }) => {
       return toast({
         title: 'Must be logged in to add to cart!',
         action: (
-          <Link href="/sign-in">
+          <Link aria-label="sign-in" href="/sign-in">
             <ToastAction altText="sign-in">Sign-In</ToastAction>
           </Link>
         ),
@@ -34,6 +34,7 @@ const AddToCartBtn = ({ anime }: { anime: AnimeCardType }) => {
 
   return (
     <button
+      aria-label="add to cart"
       onClick={(e) => clickHandler(e, anime)}
       className="hover:scale-125 text-3xl transition-all"
     >

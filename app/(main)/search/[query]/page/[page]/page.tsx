@@ -67,21 +67,30 @@ const SearchPage = async ({
       </div>
       <div className="flex justify-end gap-4 m-2">
         {searchResults.length > 10 && (
-          <Link href={`/search/${params.query}/page/${+params.page + 1}`}>
+          <Link
+            aria-label="more button"
+            href={`/search/${params.query}/page/${+params.page + 1}`}
+          >
             <Button variant="default" className="text-white font-semibold">
               More
             </Button>
           </Link>
         )}
         {params.page > 1 && (
-          <Link href={`/search/${params.query}/page/${+params.page - 1}`}>
+          <Link
+            aria-label="back button"
+            href={`/search/${params.query}/page/${+params.page - 1}`}
+          >
             <Button variant="default" className="text-white font-semibold">
               Back
             </Button>
           </Link>
         )}
         {params.page <= 1 && (
-          <Link href={`/search/${params.query}/page/${+params.page - 1}`}>
+          <Link
+            aria-label="back button"
+            href={`/search/${params.query}/page/${+params.page - 1}`}
+          >
             <Button
               disabled={true}
               variant="secondary"

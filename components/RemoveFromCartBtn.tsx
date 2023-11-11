@@ -17,6 +17,7 @@ const RemoveFromCartBtn = ({ anime }: { anime: AnimeCardType }) => {
 
   return (
     <button
+      aria-label="remove from cart"
       onClick={(e) => clickHandler(e, anime)}
       className="hover:scale-125 mb-1 transition-all"
     >

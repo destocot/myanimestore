@@ -13,9 +13,10 @@ export default function NotFound() {
       />
       <div className="flex flex-col absolute top-10 right-5 md:right-20 gap-4 text-primary-foreground">
         <h2 className="text-2xl md:text-5xl">Anime not found!</h2>
-        <button className="text-xl md:text-4xl">
+        <button className="text-xl md:text-4xl" aria-label="return home">
           Click{' '}
           <Link
+            aria-label="go back home"
             className=" underline underline-offset-4 hover:text-[peru] text-primary"
             href="/"
           >

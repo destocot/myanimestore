@@ -8,30 +8,44 @@ export default function Footer() {
         <div className="flex flex-wrap justify-center">
           <ul className="flex items-center space-x-4">
             <li className="hover:underline underline-offset-4">
-              <Link href={'/'}>Home</Link>
+              <Link aria-label="home" href={'/'}>
+                Home
+              </Link>
             </li>
             <li className="hover:underline underline-offset-4">
-              <Link href={'/profile'}>Profile</Link>
+              <Link aria-label="profile" href={'/profile'}>
+                Profile
+              </Link>
             </li>
             <li className="hover:underline underline-offset-4">
-              <Link href={'/search/anime/page/1'}>Search</Link>
+              <Link aria-label="search anime" href={'/search/anime/page/1'}>
+                Search
+              </Link>
             </li>
             <li className="hover:underline underline-offset-4">
-              <Link href={'/top'}>Khurram&apos;s Top 10</Link>
+              <Link href={'/top'} aria-label="top 10 anime">
+                Khurram&apos;s Top 10
+              </Link>
             </li>
           </ul>
         </div>
         <div className="flex justify-center space-x-4 lg:mt-0">
-          <Link href={'https://www.linkedin.com/in/khurram-ali1/'}>
+          <Link
+            href={'https://www.linkedin.com/in/khurram-ali1/'}
+            aria-label="linkedin"
+          >
             <Linkedin />
           </Link>
-          <Link href={'https://github.com/destocot'}>
+          <Link href={'https://github.com/destocot'} aria-label="github">
             <GithubIcon />
           </Link>
-          <Link href={'https://khurramali.site'}>
+          <Link href={'https://khurramali.site'} aria-label="portfolio">
             <FolderKanbanIcon />
           </Link>
-          <Link href={'https://www.instagram.com/instrumentalwords/'}>
+          <Link
+            href={'https://www.instagram.com/instrumentalwords/'}
+            aria-label="instagram"
+          >
             <Instagram />
           </Link>
         </div>

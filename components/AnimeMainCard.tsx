@@ -27,6 +27,7 @@ const AnimeMainCard = ({
         <p className="font-semibold text-center">{anime.title}</p>
         <div className="flex gap-4">
           <Link
+            aria-label="anime details"
             href={`/anime/${anime.mal_id}`}
             className="hover:scale-125 text-3xl transition-all"
           >

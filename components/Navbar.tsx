@@ -10,64 +10,86 @@ const Navbar = async () => {
 
   return (
     <nav className="flex flex-wrap justify-between items-center pt-2">
-      <Link href="/" className="flex mx-auto md:mx-0 gap-5 items-center">
+      <Link
+        href="/"
+        className="flex mx-auto md:mx-0 gap-5 items-center"
+        aria-label="home"
+      >
         <h1 className="text-5xl sm:text-4xl">MyAnimeStore</h1>
         <FaStore className="text-5xl" />
       </Link>
       <ul className="flex mt-4 items-center mx-auto md:mx-0 gap-4">
         {!!userId ? (
           <>
-            <Link href="/">
-              <Button variant="secondary">
-                <FaHome className="text-xl" />
-              </Button>
-            </Link>
-            <Link href="/profile">
-              <Button variant="default" className="text-white font-semibold">
-                <FaUser className="text-lg" />
-              </Button>
-            </Link>
-            <Link href="/top">
-              <Button variant="default" className="text-white font-semibold">
-                <FaStar className="text-lg" />
-              </Button>
-            </Link>
-            <Link href="/ai" className="relative">
-              <Button
-                variant="destructive"
-                className="text-white font-semibold"
-              >
-                <FaMicrochip className="text-lg" />
-              </Button>
-              <code className="absolute -top-4 right-0 text-sm whitespace-nowrap left-0 animate-bounce">
-                Try AI
-              </code>
-            </Link>
-            <div className="relative md:hidden">
-              <CartToggle />
-            </div>
-            <UserButton
-              afterSignOutUrl="/"
-              appearance={{
-                elements: {
-                  userButtonPopoverActionButton__manageAccount: 'hidden',
-                },
-              }}
-            />
+            <li>
+              <Link href="/" aria-label="home">
+                <Button variant="secondary">
+                  <FaHome className="text-xl" />
+                </Button>
+              </Link>
+            </li>
+            <li>
+              <Link href="/profile" aria-label="profile">
+                <Button variant="default" className="text-white font-semibold">
+                  <FaUser className="text-lg" />
+                </Button>
+              </Link>
+            </li>
+            <li>
+              <Link href="/top" aria-label="top 10 anime">
+                <Button variant="default" className="text-white font-semibold">
+                  <FaStar className="text-lg" />
+                </Button>
+              </Link>
+            </li>
+            <li>
+              <Link href="/ai" className="relative" aria-label="anime ai">
+                <Button
+                  variant="destructive"
+                  className="text-white font-semibold"
+                >
+                  <FaMicrochip className="text-lg" />
+                </Button>
+                <code className="absolute -top-8 right-0 text-sm whitespace-nowrap left-0 animate-bounce">
+                  Try AI
+                </code>
+              </Link>
+            </li>
+            <li>
+              <div className="relative md:hidden">
+                <CartToggle />
+              </div>
+            </li>
+            <li>
+              <UserButton
+                afterSignOutUrl="/"
+                appearance={{
+                  elements: {
+                    userButtonPopoverActionButton__manageAccount: 'hidden',
+                  },
+                }}
+              />
+            </li>
           </>
         ) : (
           <>
-            <Link href="/top">
-              <Button variant="default" className="text-white font-semibold">
-                <FaStar className="text-lg" />
-              </Button>
-            </Link>
-            <div className="relative md:hidden">
-              <CartToggle />
-            </div>
-            <Link href="/sign-in">
-              <Button className="font-semibold text-white">Login</Button>
-            </Link>
+            <li>
+              <Link href="/top" aria-label="top 10 anime">
+                <Button variant="default" className="text-white font-semibold">
+                  <FaStar className="text-lg" />
+                </Button>
+              </Link>
+            </li>
+            <li>
+              <div className="relative md:hidden">
+                <CartToggle />
+              </div>
+            </li>
+            <li>
+              <Link href="/sign-in" aria-label="sign-in">
+                <Button className="font-semibold text-white">Login</Button>
+              </Link>
+            </li>
           </>
         )}
       </ul>

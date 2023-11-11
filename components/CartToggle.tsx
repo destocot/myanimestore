@@ -33,7 +33,7 @@ export default async function SheetDemo() {
         {userId && (
           <SheetFooter>
             <SheetClose asChild>
-              <Link href="/checkout" className="w-full">
+              <Link aria-label="checkout" href="/checkout" className="w-full">
                 <Button
                   type="button"
                   className="w-full py-6 text-white font-semibold"
@@ -45,7 +45,7 @@ export default async function SheetDemo() {
           </SheetFooter>
         )}
         {!userId && (
-          <Link href="/sign-in" className="w-full">
+          <Link aria-label="sign-in" href="/sign-in" className="w-full">
             <Button
               type="button"
               className="mt-4 w-full py-6 text-white font-semibold"
