@@ -12,19 +12,21 @@ import { ChatMessageType } from '@/types/types'
 import { zodResolver } from '@hookform/resolvers/zod'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { FaSearch } from 'react-icons/fa'
+import { FaAngleLeft, FaAngleRight, FaSearch } from 'react-icons/fa'
 import z from 'zod'
 
 const formatMessage = (message: string) => {
   return { role: 'user', content: message }
 }
 
-const Chat = () => {
+const Chat = ({ points }: { points: number }) => {
   const [history, setHistory] = useState<ChatMessageType[]>([])
   const [disabled, setDisabled] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
+  const router = useRouter()
 
   useEffect(() => {
     if (history.length > 1) {
@@ -36,6 +38,13 @@ const Chat = () => {
   }, [history])
 
   const submitHandler = async (values: z.infer<typeof formSchema>) => {
+    if (points <= 0) {
+      return form.setError('message', {
+        type: 'custom',
+        message: 'No points available, please try again tomorrow',
+      })
+    }
+
     setDisabled(true)
     const formatted = formatMessage(values.message)
     setHistory([...history, formatted])
@@ -44,10 +53,18 @@ const Chat = () => {
       method: 'POST',
       body: JSON.stringify({ history, message: formatted }),
     })
-    const { data } = await res.json()
+    const json = await res.json()
 
-    setHistory([...history, formatted, data])
-    form.reset({ message: '' })
+    if (json.error) {
+      return form.setError('message', {
+        type: 'custom',
+        message: json.error,
+      })
+    } else {
+      setHistory([...history, formatted, json.data])
+      form.reset({ message: '' })
+    }
+    router.refresh()
     setDisabled(false)
   }
 
@@ -110,21 +127,35 @@ export default Chat
 
 const displayMessage = (message: ChatMessageType) => {
   if (message.role === 'user') {
-    return <p className="text-lg">{message.content}</p>
+    return (
+      <p className="text-lg flex items-center">
+        <FaAngleRight />
+        {message.content}
+      </p>
+    )
   } else {
     return (
-      <div className="flex gap-2">
+      <div className="flex gap-2 text-lg min-h-[150px]">
         <Image
           src={message.main_picture || ''}
-          alt="message image"
+          alt="anime image"
           width={400}
           height={600}
-          className="object-cover w-20 h-auto aspect-[2/3]"
+          className="object-cover w-24 h-auto aspect-[2/3]"
         />
         <div className="flex flex-col justify-between">
           <p>
-            You might enjoy:{' '}
-            <span className="text-blue-500 font-semibold">{message.title}</span>
+            <div className="flex items-center">
+              <FaAngleLeft className="text-xl" />
+              You might enjoy:{' '}
+            </div>
+            <Link
+              aria-label="anime details"
+              href={`/anime/${message.mal_id}`}
+              className="font-semibold transition-all hover:text-blue-500"
+            >
+              {message.title}
+            </Link>
           </p>
           <p className="">
             click{' '}
@@ -142,18 +173,3 @@ const displayMessage = (message: ChatMessageType) => {
     )
   }
 }
-
-/**
- * 
- * {
-            return (
-              <div
-                key={message.content}
-                className="bg-slate-900/40 shadow py-1 px-4 rounded w-full"
-              >
-                <h4>{message.role}</h4>
-                <p className="text-lg">{message.content}</p>
-              </div>
-            )
-          }
- */

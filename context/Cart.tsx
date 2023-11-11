@@ -61,6 +61,7 @@ const Cart = ({ children }: { children: React.ReactNode }) => {
   }
 
   const clearCart = () => {
+    localStorage.removeItem('mas-cart')
     setCart([])
   }
 
