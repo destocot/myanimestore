@@ -67,7 +67,7 @@ const AnimeDetailsPage = async ({ params }: { params: { id: number } }) => {
   return (
     <main>
       <div className="grid grid-cols-[200px_auto] md:grid-cols-[300px_auto] mb-4">
-        <Image
+        <img
           src={anime.main_picture}
           alt="anime image"
           width={400}
@@ -100,7 +100,7 @@ const AnimeDetailsPage = async ({ params }: { params: { id: number } }) => {
             className="relative border-2 border-transparent transition-all hover:border-white max-w-[215px] mx-auto"
             key={anime._id}
           >
-            <Image
+            <img
               src={anime.main_picture}
               alt="anime image"
               width={400}

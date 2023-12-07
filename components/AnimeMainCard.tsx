@@ -16,7 +16,7 @@ const AnimeMainCard = ({
       className="relative border-2 border-transparent transition-all hover:border-white max-w-[200px] mx-auto"
       key={anime.id}
     >
-      <Image
+      <img
         src={anime.main_picture}
         alt="anime image"
         width={400}

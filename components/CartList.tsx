@@ -13,7 +13,7 @@ const CartList = () => {
             key={anime.id}
             className="flex justify-between items-end border-b border-[#efefef] mb-1 hover:bg-white/10 hover:cursor-pointer transition-all"
           >
-            <Image
+            <img
               src={anime.main_picture}
               alt="anime image"
               width={400}

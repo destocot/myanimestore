@@ -136,7 +136,7 @@ const displayMessage = (message: ChatMessageType) => {
   } else {
     return (
       <div className="flex gap-2 text-lg min-h-[150px]">
-        <Image
+        <img
           src={message.main_picture || ''}
           alt="anime image"
           width={400}

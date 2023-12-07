@@ -18,7 +18,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex mx-auto shadow">
-          <Image
+          <img
             width={400}
             height={200}
             src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f"
