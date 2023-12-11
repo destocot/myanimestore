@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   title: 'MyAnimeStore',
   description:
     'Your one-stop shop for all things anime, with user profiles, top anime lists, anime search, AI recommendations, and secure sign-in.',
+  verification: {
+    google:
+      'google-site-verification=vzw8fdLC3dzmp7M6TETYj4tqXzy0hCoNv9yPmro4EVs',
+  },
 }
 export default function RootLayout({
   children,
